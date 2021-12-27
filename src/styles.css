@@ -1,0 +1,123 @@
+.main-title {
+    text-align: left;
+    font-style: italic;
+}
+
+.main-background {
+    background: #9edcf5;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 1000px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font:bolder;
+  }
+
+  .search-location-bar {
+    margin: 30px 0px 0px -10px;
+  }
+
+  .city {
+    background: #ffffff;
+    margin: 0 auto;
+    padding: 1px;
+    border-radius: 10px;
+    max-width: 325px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+    font:bolder;
+  }
+  
+
+.text-secondary {
+  font-style: italic;
+  font-style:oblique;
+}
+
+.date-time {
+  display: block;
+  text-align: left;
+  font-style: italic;
+  background: #ffffff;
+  margin: 55px 175px auto 175px ;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.current {
+  display: block;
+  margin: 20px 175px 20px 175px ;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.time {
+  font-style: italic;
+  font-style:oblique;
+  display: block;
+  margin: 5px 50px 5px 50px ;
+  padding: 2px;
+  border-radius: 10px;
+  color: black;
+
+}
+
+.text-secondary-weatherinfo {
+  font-style: italic;
+  font-style:oblique;
+  color:black;
+  display: block;
+}
+
+.temperature {
+  text-align: right;
+  display: block;
+  font-size: 75px;
+
+}
+
+.weather-icon {
+  width:150px;
+}
+
+.date-time2 {
+  display: block;
+  text-align: left;
+  font-style: italic;
+  background: #ffffff;
+  margin: 55px 175px 55px 175px ;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.units {
+  text-align: center;
+  font-size: 25px;
+  display: block;
+}
+
+#date-and-time {
+  text-align: left;
+  display: block;
+  margin: 50px 1px 50px 1px ;
+}
+
+#temperature-display {
+  font-size: 42px;
+}
+
+body {
+  background-image: url('/background/1.jpg')  ;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
