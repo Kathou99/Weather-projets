@@ -3,8 +3,6 @@ let currentTime = new Date();
 let currentLocationButton = document.querySelector(".locationButton");
 let searchEngine = document.querySelector("#search-form");
 
-
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -59,7 +57,7 @@ function searchCity(event) {
 }
 let searchForm = document.querySelector("#input-group , #search-form,#location-selector");
 searchForm.addEventListener("submit", searchCity);
-console.log(searchCity)
+
 
 //Show temperature
 
@@ -117,15 +115,10 @@ let btn = document.querySelector("#location-button");
 btn.addEventListener("click", getCurrentLocation);
 navigator.geolocation.getCurrentPosition(showCurrentPosition);
 
-
-////
-
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showCurrentPosition);
 }
-
-
 
 function getforecast(coordinates) {
   console.log(coordinates);
