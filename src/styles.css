@@ -38,7 +38,7 @@
   text-align: left;
   font-style: italic;
   background: #ffffff;
-  margin: 55px 175px auto 175px ;
+  margin: 50px 195px auto 70px ;
   padding: 2px;
   border-radius: 10px;
 }
@@ -76,15 +76,15 @@
 }
 
 .weather-icon {
-  width:150px;
+  width:180px;
 }
 
-.date-time2 {
+.feelike-currentw {
   display: block;
   text-align: left;
   font-style: italic;
   background: #ffffff;
-  margin: 55px 175px 55px 175px ;
+  margin: 55px 125px 55px 125px ;
   padding: 2px;
   border-radius: 10px;
 }
@@ -120,4 +120,17 @@ body {
 body, html {
   height: 100%;
   margin: 0;
+}
+
+.weather-forecast {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+.weather-forecast-date {
+  font-size: 20px;
 }

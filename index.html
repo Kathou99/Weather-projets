@@ -68,22 +68,49 @@
             </span>
           </h3>
           <span class="units">
-            <a href="#" id="celsius">°C</a> |
-            <a href="#" id="fahrenheit">°F</a> 
+            <a href="#" id="celsius-link" class="active">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a> 
           </span>
         </div>
-        <div class="date-time2" id="date-time2">"Now:Cloudy 
-          <br /><div id="realfeel" >Feel Like: -25% </div>
-        </div>
+        <div class="feelike-currentw" id="feelike-currentw">
+          <ul>
+            
+             <b>In this moment</b> <span id="titlec"></span></li>
+            
+            <li>
+              <span id="currentweather"></span></li>
+            </li>
+            <li>
+             <span id="feellike"></span></li>
+            </li>
+            </ul>
+      </div>
       </div>
     <br />
     <br />
     <br />
         <div class="date-time"> WEATHER INFO
-          <br />Wednesday 9:00am
-          <br />
-          <br /><span class="text-secondary-weatherinfo">Chance of rain: 10% <br id ="humidity-selector"/>Humudity: 83% <br id="wind-selector"/>Wind: 8km/hr <br />Pollen:Low  <br /> Precipitation:15%</span>
-          <br />
+          <ul>
+            <li>
+              <span  class="text-secondary-weatherinfo">Chance of rain: 10%</span></li>
+            </li>
+            <li>
+              <span  id ="humidity-selector">Humudity: 83%</span></li>
+            </li>
+            <li>
+              <span   id="wind-selector">Wind: 8km/hr</span></li>
+            </li>
+            <li>
+              <span  id="pollen">Pollen:Low </span></li>
+            </li>
+            <li>
+              <span  id="precipitation">Precipitation:15%</span></li>
+            </li>
+            <li>
+              <span  class="text-secondary-weatherinfo">Chance of rain: 10%</span></li>
+            </li>
+          </ul>
+
         </div>
         </div>
        
@@ -92,41 +119,8 @@
   <div class="card-body">
     <div class="container">
       <div class="row">
-        <div class="col-md-2 daily">
-          <span class="text-secondary">THU</span><br />
-          <img src="images/icon-cloud.png" alt="cloudy" width="40px" />
-          <br />
-          -21°C
-        </div>
-        <div class="col-md-2 daily">
-          <span class="text-secondary">FRI</span><br />
-          <img
-            src="images/icon-sun-cloud.png"
-            alt="sun"
-            width="40px"
-          /><br />
-          -18°C
-        </div>
-        <div class="col-md-2 daily">
-          <span class="text-secondary">SAT</span><br />
-          <img src="images/icon-sun.png" alt="sun" width="40px" /><br />
-          -19°C
-        </div>
-        <div class="col-md-2 daily">
-          <span class="text-secondary">SUN</span><br />
-          <img src="images/icon-snow.png" alt="sun" width="40px" /><br />
-          -22°C
-        </div>
-        <div class="col-md-2 daily">
-          <span class="text-secondary">MON</span><br />
-          <img src="images/icon-cloud.png" alt="cloudy" width="40px" /><br />
-          -17°C
-        </div>
-        <div class="col-md-2 daily">
-          <span class="text-secondary">TUE</span><br />
-          <img src="images/icon-verglas.png" alt="rain" width="40px" /><br />
-          -17°C
-        </div>
+        <div class="weather-forecast" id="forecast"></div>
+        
       </div>
       </div>
     </div>
