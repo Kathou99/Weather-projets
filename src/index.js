@@ -64,45 +64,42 @@ console.log(searchCity)
 //Show temperature
 
 function showTemperature(response) {
-  console.log(response.data);
-  // ---------------------------------------------------------------------------
-  let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute("alt", response.data.weather[0].description);
-    // ---------------------------------------------------------------------------
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.name;
-  // ---------------------------------------------------------------------------
-  let temperature = `${Math.round(response.data.main.temp)}°C`;
-  console.log(response.data.main.temp);
-  let temperatureElement = document.querySelector("#temperature-display");
-  temperatureElement.innerHTML = temperature;
-  console.log(response.data);
-  console.log(response.data.main.temp);
-  let currentTemp = Math.round(response.data.main.temp);
- 
-  temperatureElement.innerHTML = `${currentTemp} °C`;
-let displayCity = document.querySelector(`h1`);
-let displayWeatherCondition = document.querySelector(`#currentweather`);
-let displayWind = document.querySelector(`#wind-selector`);
-let displayHumidity = document.querySelector(`#humidity-selector`);
-
-
-let realFeelCelsius = response.data.main.feels_like;
-//console.log(`${Math.round(realFeelCelsius)}° C`)
-let displayRealFeel = document.querySelector(`#feellike`);
-let celsius = response.data.main.temp;
-displayCity.innerHTML = response.data.name;
-  displayWeatherCondition.innerHTML = `<b>Now:</b> ${response.data.weather[0].description}`;
-  displayWind.innerHTML = `<b>Wind:</b> ${Math.round(response.data.wind.speed)} km/h`;
-  displayHumidity.innerHTML = `<b>Humidity</b> ${response.data.main.humidity}%`;
-  displayRealFeel.innerHTML = `<b> Feel like:</b> ${Math.round(realFeelCelsius)}° C`;
- console.log(`${Math.round(realFeelCelsius)}° C`)
- getforecast(response.data.coord);
+    let iconElement = document.querySelector(`#icon`);
+    let temperature = `${Math.round(response.data.main.temp)}°C`;
+    let temperatureElement = document.querySelector(`#temperature-display`);
+    let currentTemp = Math.round(response.data.main.temp);
+    let displayCity = document.querySelector(`h1`);
+    let displayWeatherCondition = document.querySelector(`#currentweather`);
+    let displayWind = document.querySelector(`#wind-selector`);
+    let displayHumidity = document.querySelector(`#humidity-selector`);
+    let displayRealFeel = document.querySelector(`#feellike`);
+    let temp_min = document.querySelector(`#temp_min`)
+    let temp_max = document.querySelector(`#temp_max`) 
+    let pressure = document.querySelector(`#pressure`)
+    let visibility = document.querySelector(`#visibility`)
+    let clounds = document.querySelector(`#clounds`)
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+    let cityElement = document.querySelector("#city");
+    cityElement.innerHTML = response.data.name;
+    temperatureElement.innerHTML = temperature;
+    temperatureElement.innerHTML = `${currentTemp} °C`;
+    realFeelCelsius = response.data.main.feels_like;
+    celsiusTemperature = response.data.main.temp;
+    displayCity.innerHTML = response.data.name;
+    displayWeatherCondition.innerHTML = `<b>Now:</b> ${response.data.weather[0].description}`;
+    displayWind.innerHTML = `<b>Wind:</b> ${Math.round(response.data.wind.speed)} km/h`;
+    displayHumidity.innerHTML = `<b>Humidity</b> ${response.data.main.humidity}%`;
+    displayRealFeel.innerHTML = `<b> Feel like:</b> ${Math.round(realFeelCelsius)}° C`;
+    temp_min.innerHTML = `<b> Temps Min:</b> ${Math.round(response.data.main.temp_min)}° C`;
+    temp_max.innerHTML = `<b> Temps Max:</b> ${Math.round(response.data.main.temp_max)}° C`;
+    pressure.innerHTML = `<b> Pressure:</b> ${Math.round(response.data.main.pressure)} Ka`;
+    visibility.innerHTML = `<b> Visibility:</b> ${Math.round(response.data.visibility)}`;
+    clounds.innerHTML =  `<b> Clounds:</b> ${Math.round(response.data.clouds.all)}%`;
+    getforecast(response.data.coord);
 }
 // Show Geocordinates
 function showCurrentPosition(position) {
-  console.log(position);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
 
@@ -115,19 +112,29 @@ function showCurrentPosition(position) {
     )
     .then(showTemperature);
 }
+
 let btn = document.querySelector("#location-button");
 btn.addEventListener("click", getCurrentLocation);
 navigator.geolocation.getCurrentPosition(showCurrentPosition);
+
+
+////
 
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showCurrentPosition);
 }
 
+
+
 function getforecast(coordinates) {
   console.log(coordinates);
   let apiKey = "c2a98dac7a66049f64b0810dd03180a2";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiKey2 = "1c7c88bbd12d265936fef31a47a3c9be";
+  let apiUrl2 = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey2}`;
+  console.log(apiUrl2);
+  axios.get(apiUrl2).then(displayForecast);
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
@@ -176,32 +183,6 @@ function getforecast(coordinates) {
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
-//Convert to Celsius
-//function displayCelsius(event) {
- // event.preventDefault();
- // let showCelsius = document.querySelector(`#temperature-display`);
- // showCelsius.innerHTML = `${Math.round(celsius)}° C`;
- // let showRealFeel = document.querySelector(`#realfeel`);
- // showRealFeel.innerHTML = `${Math.round(realFeelCelsius)}° C`;
-//}
-//Convert to Fahrenheit
-//function displayFahrenheit(event) {
- // event.preventDefault();
- // celsiusLink.classList.remove("active");
- // fahrenheitLink.classList.add("active");
-  //let showTemperature = document.querySelector("#temperature-display");
- // let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
- // showTemperature.innerHTML = Math.round(fahrenheitTemp);
-
- // let showRealFeel = document.querySelector(`#realfeel`);
- // convertRealFeel = realFeelCelsius * 1.8 + 32;
-  //showRealFeel.innerHTML = `${Math.round(convertRealFeel)}° F`;
-//}
-
-
-
-
-
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
@@ -209,11 +190,13 @@ function showFahrenheitTemp(event) {
   fahrenheitLink.classList.add("active");
   let showTemperature = document.querySelector("#temperature-display");
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
-  showTemperature.innerHTML = Math.round(fahrenheitTemp);
+  showTemperature.innerHTML = `${Math.round(fahrenheitTemp)}° F`;
 
-   //let showRealFeel = document.querySelector(`#realfeel`);
-  //convertRealFeel = realFeelCelsius * 1.8 + 32;
-  //showRealFeel.innerHTML = `${Math.round(convertRealFeel)}° F`;
+   let showRealFeel = document.querySelector(`#feellike`);
+  convertRealFeel = realFeelCelsius * 1.8 + 32;
+  showRealFeel.innerHTML = `<b> Feel like:</b> ${Math.round(convertRealFeel)}° F`;
+
+ 
 }
 
 function showCelsiusTemp(event) {
@@ -221,12 +204,14 @@ function showCelsiusTemp(event) {
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
   let showTemperature = document.querySelector("#temperature-display");
-  showTemperature.innerHTML = Math.round(celsiusTemperature);
-
-   // let showRealFeel = document.querySelector(`#realfeel`);
- // showRealFeel.innerHTML = `${Math.round(realFeelCelsius)}° C`;
+  showTemperature.innerHTML = `${Math.round(celsiusTemperature)}° C`;
+ 
+  let showRealFeel = document.querySelector(`#feellike`);
+  showRealFeel.innerHTML = `<b> Feel like:</b> ${Math.round(realFeelCelsius)}° C`;
+  
 }
 
+let realFeelCelsius = null;
 let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
