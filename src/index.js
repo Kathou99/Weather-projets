@@ -51,7 +51,7 @@ function searchCity(event) {
     axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 } else {
   event.preventDefault();
-  alert(`Please Check the name of the city you have enter,we will refresh the page now... `);
+  alert(`Please Check the name of the city you have enter :) `);
 
   } 
 }
