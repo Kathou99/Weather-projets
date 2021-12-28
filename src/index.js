@@ -78,7 +78,7 @@ function showTemperature(response) {
     let pressure = document.querySelector(`#pressure`)
     let visibility = document.querySelector(`#visibility`)
     let clounds = document.querySelector(`#clounds`)
-    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);
     let cityElement = document.querySelector("#city");
     cityElement.innerHTML = response.data.name;
@@ -132,7 +132,7 @@ function getforecast(coordinates) {
   let apiKey = "c2a98dac7a66049f64b0810dd03180a2";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   let apiKey2 = "1c7c88bbd12d265936fef31a47a3c9be";
-  let apiUrl2 = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey2}`;
+  let apiUrl2 = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey2}`;
   console.log(apiUrl2);
   axios.get(apiUrl2).then(displayForecast);
   console.log(apiUrl);
@@ -152,7 +152,7 @@ function displayForecast(response) {
      <div class= "col-2">
       <div class = "weather-forecast-date">${formatDay(forecastDay.dt)}</div>
        <img
-        src="http://openweathermap.org/img/wn/${
+        src="https://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
         }@2x.png"
         alt= ""
