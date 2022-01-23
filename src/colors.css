@@ -1,0 +1,60 @@
+.first-color {
+  height: 600px;
+  border-radius: 20px;
+  padding: 0 25px;
+  background: linear-gradient(
+    180.3deg,
+    rgb(221, 221, 221) 5.5%,
+    rgb(0, 194, 253) 90.2%
+  );
+}
+
+  
+  .second-color {
+    background: blueviolet;
+  }
+  
+  .third-color {
+    background: #7971ea;
+  }
+  
+  .fourth-color {
+    background: #b8dff0;
+  }
+
+  .container {
+    height: 600px;
+    border-radius: 20px;
+    padding: 0 25px;
+    background: linear-gradient(
+      180.3deg,
+      rgb(221, 221, 221) 5.5%,
+      rgb(0, 194, 253) 90.2%
+    );
+  }
+  
+  .signature {
+    background: linear-gradient(
+      180.3deg,
+      rgb(0, 195, 255) 5.5%,
+      rgb(153, 0, 255) 90.2%
+    );
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 8px 2px;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+  }
+  
+  .open-source {
+    text-decoration: none;
+    color: rgb(9, 255, 0);
+    text-align: footer;
+  }
+  
+  li {
+    list-style: none;
+    display: inline;
+    padding: 0 5px;
+  }

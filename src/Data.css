@@ -1,0 +1,58 @@
+h2 {
+    font-size: 20px;
+    color: blueviolet;
+  }
+  
+  h4 {
+    position: relative;
+    left: 10px;
+    bottom: 48px;
+    font-size: 18px;
+  }
+  
+  li {
+    list-style: none;
+    display: inline;
+    padding: 0 5px;
+  }
+  
+  .today {
+    border: 3px solid rgb(221, 221, 221);
+    margin: 0;
+    height: 310px;
+    border-radius: 10px;
+  }
+  
+  .weather {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .row {
+    text-align: center;
+  }
+  
+  #main-icon {
+    display: inline-block;
+    max-width: 150px;
+    text-align: center;
+  }
+  
+  .factors-climate {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 90px;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    max-width: 20px;
+  }
+  
+  #weatherinfo {
+    display: block;
+    text-align: left;
+    font-style: italic;
+    padding: 2px;
+    border-radius: 10px;
+  }
