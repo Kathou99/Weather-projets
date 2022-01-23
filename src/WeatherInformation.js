@@ -96,7 +96,7 @@ export default function WeatherInformation({
         <div className="row top-level-row">
           <div className="col">
             <div className="align-self-center">
-              <h1>Loading...</h1>
+              <h1>Loading...Please wait</h1>
             </div>
           </div>
         </div>

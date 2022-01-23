@@ -1,0 +1,28 @@
+.col-2 {
+    height: 120px;
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    margin: 20px 14.9px;
+    text-align: center;
+    padding: 0 10px;
+    max-width: 131px;
+  }
+  
+  .image {
+    display: inline-block;
+    max-width: 60px;
+    text-align: center;
+  }
+  
+  .quotes {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  #text-forcast {
+    text-align: center;
+    font-style: italic;
+    font-style: oblique;
+  }
+  

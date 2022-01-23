@@ -1,5 +1,5 @@
-export const apiKey = "ce127c4a4bf4aa798458ca629a00045c";
+export const apiKey = "f570a1fbc37130aef5bf06a2e40664d1";
 export const units = "metric";
-export function convertToFahrenheit(temp) {
-  return (temp * 9) / 5 + 32;
+export function convertToFahrenheit(temps) {
+  return (temps * 9) / 5 + 32;
 }

@@ -1,0 +1,13 @@
+.Search .search-bar,
+.text-input,
+.submit-btn {
+  width: 100%;
+}
+
+.Search .submit-btn {
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -1,38 +1,56 @@
-.App {
+
+a {
+  color: #60faff;
+  text-decoration: none;
+}
+
+.centered {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-level-row {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("https://i.imgur.com/CpYGqYO.jpg"); /*fix later */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.signature {
+  background: linear-gradient(
+    180.3deg,
+    rgb(0, 195, 255) 5.5%,
+    rgb(153, 0, 255) 90.2%
+  );
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 8px 2px;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.open-source {
+  text-decoration: none;
+  color: rgb(9, 255, 0);
+  text-align: footer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  list-style: none;
+  display: inline;
+  padding: 0 5px;
 }

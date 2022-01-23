@@ -33,14 +33,3 @@
   margin-right: auto;
 }
 
-body {
-  background-image: url("https://i.imgur.com/CpYGqYO.jpg"); /*fix later */
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-}

@@ -36,6 +36,7 @@ export default function CurrentLocationButton({ handleWeatherResponse }) {
             <i className="fas fa-search-location fa-1x" />
           </div>
           <div className="col">
+        
             <span>Current Location</span>
           </div>
         </div>
